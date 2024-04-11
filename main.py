@@ -16,3 +16,8 @@ async def root():
 async def root():
     logging.info("Custom endpoint was called")
     return {"message": f"{os.getenv('MESSAGE')}"}
+
+@app.get("/env_var_number")
+async def root():
+    logging.info("Custom endpoint was called")
+    return {"number": f"{os.getenv('NUMBER')}"}
