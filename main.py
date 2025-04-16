@@ -13,12 +13,11 @@ async def root():
     return {"message": "Hello World"}
 
 @app.get("/env_var_message")
-async def root():
-    logging.info("Custom endpoint was called")
-    message = os.getenv('MESSAGE') or "Environment variable MESSAGE not set"
-    return {"message": message}
+async def env_message():
+    logging.info("env_var_message endpoint was called")
+    return {"message": f"{os.getenv('MESSAGE', 'No message found')}"}
 
 @app.get("/env_var_number")
-async def root():
-    logging.info("Custom endpoint was called")
-    return {"number": f"{os.getenv('NUMBER')}"}
+async def env_number():
+    logging.info("env_var_number endpoint was called")
+    return {"number": f"{os.getenv('NUMBER', 'No number found')}"}
