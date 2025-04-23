@@ -6,7 +6,8 @@ import os
 logging.basicConfig(level=logging.INFO)
 
 app = FastAPI(
-    openapi_version="3.1.0"
+    openapi_url="/openapi.json",
+    openapi_version="3.0.2",
 )
 
 @app.get("/")
