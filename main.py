@@ -5,7 +5,9 @@ import os
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
-app = FastAPI()
+app = FastAPI(
+    openapi_version="3.1.0"
+)
 
 @app.get("/")
 async def root():
