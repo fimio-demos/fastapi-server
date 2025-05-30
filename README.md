@@ -2,10 +2,6 @@
 
 This repo shows how to use app.fimio.xyz to build and deploy a lightweight, high-performance FastAPI application.
 
-Hello
-Helosss
-Hell iiiis
-
 ## Features
 
 - Interactive Swagger UI documentation
